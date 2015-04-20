@@ -1,0 +1,101 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container-fluid">
+  <section class="container">
+    <div class="container-page">
+      <div class="col-sm-12 col-md-10" id="search-form">
+        <h4 class="col-sm-12">Search for spells or groups of spells right here!
+        Input everything that you'd like to filter spells by then hit the
+        search button!</h4>
+        <div class="col-sm-6">
+          <button ng-click="search()" id="search" class="btn btn-primary btn-block" type="button" autofocus>Search!</button>
+        </div>
+
+        <!-- Spell Name search row-->
+        <div class="form-group col-sm-12">
+          <label for="spellname">Spell Name: </label>
+          <input ng-model="formfields.spellname" id="spellname" name="spellname" class="form-control" type="text">
+        </div>
+
+        <!-- Class and Level search row -->
+        <div class="form-group col-sm-6">
+          <label for="class">Class: </label>
+          <input ng-model="formfields.class" id="class" name="class" class="form-control" type="text">
+        </div>
+        <div class="form-group col-sm-6">
+          <label for="level">Level: </label>
+          <input ng-model="formfields.level" id="level" name="level" class="form-control" type="text">
+        </div>
+
+        <!-- Description -->
+        <div class="form-group col-sm-12">
+          <label for="description">Description: </label>
+          <input ng-model="formfields.description" id="description" name="description" class="form-control" type="text">
+        </div>
+
+        <!-- School and Subschool search row -->
+        <div class="form-group col-sm-4">
+          <label for="school">School: </label>
+          <input ng-model="formfields.school" id="school" name="school" class="form-control" type="text">
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="subschool">Subschool: </label>
+          <input ng-model="formfields.subschool" id="subschool" name="subschool" class="form-control" type="text">
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="domain">Domain: </label>
+          <input ng-model="formfields.domain" id="domain" name="domain" class="form-control" type="text">
+        </div>
+
+        <!-- Casting time & material Componenets -->
+        <div class="form-group col-sm-4">
+          <label for="casting_time">Casting time: </label>
+          <input ng-model="formfields.casting_time" id="casting_time" name="casting_time" class="form-control" type="text">
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="components">Components: </label>
+          <input ng-model="formfields.components" id="components" name="components" class="form-control" type="text">
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="descriptor">Descriptor: </label>
+          <input ng-model="formfields.descriptor" id="descriptor" name="descriptor" class="form-control" type="text">
+        </div>
+
+        <!-- Range, Area, and Effect -->
+        <div class="form-group col-sm-4">
+          <label for="range">Range: </label>
+          <input ng-model="formfields.range" id="range" name="range" class="form-control" type="text">
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="area">Area: </label>
+          <input ng-model="formfields.area" id="area" name="area" class="form-control" type="text">
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="effect">Effect: </label>
+          <input ng-model="formfields.effect" id="effect" name="effect" class="form-control" type="text">
+        </div>
+
+        <!-- Targets and Duration -->
+        <div class="form-group col-sm-6">
+          <label for="target">Target(s): </label>
+          <input ng-model="formfields.target" id="target" name="target" class="form-control" type="text">
+        </div>
+        <div class="form-group col-sm-6">
+          <label for="duration">Duration: </label>
+          <input ng-model="formfields.duration" id="duration" name="duration" class="form-control" type="text">
+        </div>
+
+        <!-- Saving throws and SR -->
+        <div class="form-group col-sm-6">
+          <label for="saving_throw">Saving Throw(s): </label>
+          <input ng-model="formfields.saving_throw" id="saving_throw" name="saving_throw" class="form-control" type="text">
+        </div>
+        <div class="form-group col-sm-6">
+          <label for="spell_resistance">Spell Resistance: </label>
+          <input ng-model="formfields.spell_resistance" id="spell_resistance" name="spell_resistance" class="form-control" type="text">
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>

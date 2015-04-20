@@ -1,0 +1,40 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <img src="assets/images/branding-large.png" alt="Pathfinder Logo">
+    <!-- <h1>Welcome to the Pathfinder Spells Database!</h1> -->
+    <p class="lead">We hope this eases your search for the right kinds of magical might.</p>
+    <p><em>This app uses data published by Paizo for the Pathfinder RPG system.
+      <a href="/legal" class="text-danger">Legal stuff</a></em></p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2 class="page-header">Random spell!</h2>
+      <h4 class="nav col-md-2 col-lg-2 col-sm-4" >
+        <a href="#">{{randomSpell.spellname}}</a>
+      </h4>
+      <h4 class="col-md-6 col-lg-6 col-sm-4">
+        {{randomSpell.short_description}}
+      </h4>
+      <h4 class="col-md-2 col-lg-2 col-sm-2">
+        {{randomSpell.resource}}
+      </h4>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>Created by
+        <a href="https://github.com/sqash" target="_blank">Sam Whiteley</a>
+        | Scaffolded with
+        <a href="http://github.com/DaftMonk/generator-angular-fullstack" target="_blank">Angular Fullstack v2.0.13</a>
+        | OGL
+        <a href="/legal">legal stuff</a>
+      </p>
+  </div>
+</footer>

@@ -1,0 +1,60 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<script type="text/ng-template" id="modal.html">
+<div>
+  <div class="modal-header">
+    <h3>{{spell.spellname}}</h3>
+    <h5 ng-show="spell.short_description">{{spell.short_description}}</h5>
+  </div>
+  <div class="modal-body">
+    <p>
+    <b>School</b> {{spell.school}}<span ng-show="spell.subschool">&nbsp;({{spell.subschool}})</span>
+    <span ng-repeat="d in spell.descriptors">&nbsp;[{{d}}]</span>
+    <strong>Level</strong> <span ng-repeat="c in spell.classes">{{c.class}} {{c.level}};&nbsp;</span>
+    </p>
+    <h4 style="border-bottom:1px solid black;border-top:1px solid black;">CASTING</h4>
+    <p><b>Casting Time: </b> {{spell.casting_time}}<br>
+    <b>Components: </b> {{spell.components}}
+    </p>
+    <h4 style="border-bottom:1px solid black;border-top:1px solid black;">EFFECT</h4>
+    <p>
+    <b>Range: </b> {{spell.range}}&nbsp;&nbsp; <b>SR: </b> {{spell.spell_resistance}}<br>
+    <span ng-show="spell.target"><b>Target: </b> {{spell.target}} <br></span>
+    <b>Duration: </b> {{spell.duration}} <br>
+    <b>Saving Throw: </b> {{spell.saving_throw}}<br>
+    </p>
+    <h4 style="border-bottom:1px solid black;border-top:1px solid black;">DESCRIPTION</h4>
+    <p>
+    {{spell.description}}
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-default" ng-click="done()">Close</button>
+  </div>
+</div>
+</script>
+
+<div class="container-fluid">
+  <section class="container-page">
+    <div class="container">
+      <div class="col-sm-12 col-md-10" id="spells">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Spell</th>
+              <th>Description</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="s in spells">
+              <td ng-click="showspell(s.spellname)"><a href="#">{{s.spellname}}</a></td>
+              <td>{{s.short_description}}</td>
+              <td>{{s.resource}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
